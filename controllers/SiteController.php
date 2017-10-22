@@ -114,6 +114,11 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionSay($message = 'Hello')
+    {
+        return $this->render('say', ['message' => $message]);
+    }
+
     /**
      * Displays about page.
      *
