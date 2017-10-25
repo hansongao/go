@@ -24,7 +24,7 @@ class SiteController extends Controller
                 'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout','captcha'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -51,6 +51,15 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'backColor'=>0x000000,//
+                'maxLength' => 6, //
+                'minLength' => 5,//
+                'padding' => 5,//
+                'height'=> 35,//
+                'width' => 90,  //  
+                'foreColor'=> 0xffffff,     //
+                'offset'=>4,        // 
+                //'controller'=>'login',        //controller                
             ],
         ];
     }
@@ -147,4 +156,6 @@ class SiteController extends Controller
             return $this->render('entry', ['model' => $model]);
         }
     }    
+    
+  
 }
