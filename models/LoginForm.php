@@ -89,9 +89,8 @@ class LoginForm extends Model
     public function attributeLabels() 
     { 
          return [ 
-                   // 'verifyCode' => 'Verification Code', 
-                   'verifyCode' => '',//,  
-            ]; 
+             'verifyCode' => 'Verification Code',  
+         ]; 
     }     
      
 }

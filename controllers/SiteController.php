@@ -56,7 +56,7 @@ class SiteController extends Controller
                 'minLength' => 5,//
                 'padding' => 5,//
                 'height'=> 35,//
-                'width' => 90,  //  
+                'width' => 85,  //  
                 'foreColor'=> 0xffffff,     //
                 'offset'=>4,        // 
                 //'controller'=>'login',        //controller                
