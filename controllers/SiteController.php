@@ -51,15 +51,15 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-                'backColor'=>0x000000,//
-                'maxLength' => 6, //
-                'minLength' => 5,//
-                'padding' => 5,//
-                'height'=> 35,//
-                'width' => 85,  //  
-                'foreColor'=> 0xffffff,     //
-                'offset'=>4,        // 
-                //'controller'=>'login',        //controller                
+                'backColor'=>0x000000,
+                'maxLength' => 6, 
+                'minLength' => 5,
+                'padding' => 5,
+                'height'=> 35,
+                'width' => 85, 
+                'foreColor'=> 0xffffff,
+                'offset'=>4, 
+                //'controller'=>'login',               
             ],
         ];
     }
@@ -146,13 +146,8 @@ class SiteController extends Controller
         $model = new EntryForm;
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            //  $model 
-
-            //  ...
-
             return $this->render('entry-confirm', ['model' => $model]);
         } else {
-            // 
             return $this->render('entry', ['model' => $model]);
         }
     }    
